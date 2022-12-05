@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+/*Header*/
+header {
+    position: relative;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity .5s ease;
+}
+
+header ul.nav li:hover {
+    opacity: .6;
+}
+
+/*icon-box*/
+header .shop-cart-button {
+    padding-top: 1.5px;
+    width: auto;
+    float: right;
+    cursor: pointer;
+    transition: color, transform .3s;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+    color: rgb(147, 147, 147);
+    transform: scale(1.08);
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    background-color: rgb(247, 247, 247);
+    -webkit-box-shadow: 0px 1px 11px -5px rgba(34, 60, 80, 0.58);
+    -moz-box-shadow: 0px 1px 11px -5px rgba(34, 60, 80, 0.58);
+    box-shadow: 0px 1px 11px -5px rgba(34, 60, 80, 0.58);
+    z-index: 500;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+
+header .shop-cart .item {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    background-color: rgb(228, 228, 228);
+}
+
+header .shop-cart .item img {
+    background-color: rgb(247, 247, 247);
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+
+header .shop-cart .item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+header .shop-cart .item p {
+    color: #333;
+    font-weight: 600;
+}
+
+/*delete icon*/
+header .shop-cart .item .delete-icon {
+    color:rgba(34, 60, 80, 0.58);
+    float: right;
+    position: relative;
+    top: -13px;
+    right: 3px;
+    cursor: pointer;
+    transition: color, transform .3s ease;
+}
+
+header .shop-cart .item .delete-icon:hover {
+    color:rgb(147, 147, 147);
+    transform: scale(1.08);
+}
+
+/*presentation*/
+header .presentation {
+    margin: 50px 0;
+    background: url('./img/bg.jpg') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: rgb(255, 243, 184);
+    position: relative;
+}
+
+header .presentation::after {
+    content: 'Лучшие товары для вашего компютера';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 350px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+header .presentation::before {
+    content: 'По низким ценам';
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/*items*/
+.full-item{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.777);
+    z-index: 10000;
+    overflow: auto;
+}
+
+.full-item > div {
+    width: 600px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 11px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #f5f5f5;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+
+main .item img,
+.full-item img {
+    width: 100%;
+    transition: transform .3s;
+}
+
+.full-item img{
+    background-color: #9999;
+}
+
+main .item img:hover,
+.full-item img:hover {
+    transform: scale(1.01);
+}
+
+main h2, .full-item h2,
+main p, .full-item p,
+main b, .full-item b{
+    margin: 10px 15px;
+    color: #333;
+}
+
+main b, .full-item b {
+    color: #8d0000;
+}
+
+/*add item*/
+main .add-to-cart,
+.full-item .add-to-cart {
+    position: absolute;
+    font-size: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #223;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform .3s;
+}
+
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover {
+    transform: scale(1.05) translateX(2px);
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
